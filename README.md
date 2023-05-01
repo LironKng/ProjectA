@@ -6,11 +6,11 @@ The algorithm compares two sequences and identifies the best local alignment bet
 The project contains several implementations of the Smith Waterman algorithm in different programming languages. 
 These implementations can be found in the following files:
 
-* draftSW.c: C draft implementation of non-parallel matrix operations
-* draftSW.py: Python draft implementation of non-parallel matrix operations
-* nonParallelSW.py: Python implementation of non-parallel matrix operations
-* parallelSW.py:  Python implementation of parallel matrix operations
-* numpySW.py: Python implementation using NumPy for matrix operations
-* numbaSW.py: Python implementation using Numba, a just-in-time (JIT) compiler for Python
+* draftSw.c: C draft implementation of non-parallel matrix operations
+* draftSw.py: Python draft implementation of non-parallel matrix operations
+* nonParallelSw.py: Python implementation of non-parallel matrix operations
+* parallelSw.py:  Python implementation of parallel matrix operations
+* numpySw.py: Python implementation using NumPy for matrix operations
+* numbaSw.py: Python implementation using Numba, a just-in-time (JIT) compiler for Python
 
 In the Benchmarking.py we compare the runtime performance of Smith Watermann algorithm implemented with highly efficient methods.
