@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def smith_waterman_vectorized(seq1, seq2, match_score=2, mismatch_score=-1, gap_penalty=-1):
     m, n = len(seq1), len(seq2)
     score_matrix = np.zeros((m + 1, n + 1), dtype=int)
@@ -15,6 +16,7 @@ def smith_waterman_vectorized(seq1, seq2, match_score=2, mismatch_score=-1, gap_
     max_pos = np.unravel_index(np.argmax(score_matrix), score_matrix.shape)
 
     return score_matrix, max_score, max_pos
+
 
 def traceback_vectorized(score_matrix, seq1, seq2, max_pos, match_score=2, mismatch_score=-1, gap_penalty=-1):
     i, j = max_pos
@@ -41,6 +43,7 @@ def traceback_vectorized(score_matrix, seq1, seq2, max_pos, match_score=2, misma
             j -= 1
 
     return align1, align2
+
 
 if __name__ == "__main__":
     seq1 = "TGTTACGG"

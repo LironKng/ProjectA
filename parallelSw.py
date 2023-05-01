@@ -1,6 +1,7 @@
 import numpy as np
 from concurrent.futures import ThreadPoolExecutor
 
+
 def smith_waterman_parallel(seq1, seq2, match_score=2, mismatch_score=-1, gap_penalty=-1, num_threads=8):
     m, n = len(seq1), len(seq2)
     score_matrix = np.zeros((m + 1, n + 1), dtype=int)
