@@ -1,6 +1,5 @@
 # Smith Waterman Algorithm
-This project implements the Smith Waterman algorithm, a dynamic programming algorithm used for local sequence alignment.   
-The algorithm compares two sequences and identifies the best local alignment between them, meaning the best matching subsequence, even if it is a small part of the larger sequence.
+This project implements the Smith Waterman algorithm, a dynamic programming algorithm used for local sequence alignment. The algorithm compares two sequences and identifies the best local alignment between them, meaning the best matching subsequence, even if it is a small part of the larger sequence.
 
 # Implementation
 The project contains several implementations of the Smith Waterman algorithm in different programming languages.
