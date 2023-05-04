@@ -27,7 +27,7 @@ def run_comparison(seq1, seq2):
     print(f"Parallel implementation time: {end_time - start_time:.5f} seconds")
 
     start_time = timeit.default_timer()
-    score_matrix_vectorized, max_score_vectorized, max_pos_vectorized = smith_waterman_vectorized(seq1, seq2)
+    score_matrix_vectorized, max_score_vectorized, max_pos_vectorized = local_align(seq1, seq2)
     end_time = timeit.default_timer()
     vectorized_time = end_time - start_time
     print(f"Vectorized implementation time: {end_time - start_time:.5f} seconds")
@@ -61,18 +61,19 @@ def plot_performance(sizes, n, p, v, numba):
 
 if __name__ == "__main__":
     seq_sizes = np.arange(100, 4000, 100)
-    n_perf = []
-    p_perf = []
-    v_perf = []
+    nonParallel_perf = []
+    parallel_perf = []
+    vectorized_perf = []
+    vectorizedEff_perf = []
     numba_perf = []
     for seq_size in seq_sizes:
 
         seq1 = generate_random_sequence(seq_size)
         seq2 = generate_random_sequence(seq_size)
-        n_perf_elem, p_perf_elem, v_perf_elem, numba_perf_elem = run_comparison(seq1, seq2)
-        n_perf.append(n_perf_elem)
-        p_perf.append(p_perf_elem)
-        v_perf.append(v_perf_elem)
+        nonParallel_perf_elem, parallel_perf_elem, vectorized_perf_elem, numba_perf_elem = run_comparison(seq1, seq2)
+        nonParallel_perf.append(nonParallel_perf_elem)
+        parallel_perf.append(parallel_perf_elem)
+        vectorized_perf.append(vectorized_perf_elem)
         numba_perf.append(numba_perf_elem)
 
-    plot_performance(seq_sizes, n_perf, p_perf, v_perf, numba_perf)
+    plot_performance(seq_sizes, nonParallel_perf, parallel_perf, vectorized_perf, numba_perf)
