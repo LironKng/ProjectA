@@ -27,7 +27,7 @@ def run_comparison(seq1, seq2):
     print(f"Parallel implementation time: {end_time - start_time:.5f} seconds")
 
     start_time = timeit.default_timer()
-    score_matrix_vectorized, max_score_vectorized, max_pos_vectorized = local_align(seq1, seq2)
+    score_matrix_vectorized, max_score_vectorized, max_pos_vectorized = local_align_numpy(seq1, seq2)
     end_time = timeit.default_timer()
     vectorized_time = end_time - start_time
     print(f"Vectorized implementation time: {end_time - start_time:.5f} seconds")
