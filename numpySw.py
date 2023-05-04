@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def local_align(seq1, seq2, match_score=2, mismatch_score=-1, gap_penalty=-1):
+def local_align_numpy(seq1, seq2, match_score=2, mismatch_score=-1, gap_penalty=-1):
     m, n = len(seq1), len(seq2)
 
     # Initialize the score matrix and the first row and column to zero
@@ -31,7 +31,7 @@ def local_align(seq1, seq2, match_score=2, mismatch_score=-1, gap_penalty=-1):
     return score_matrix, max_score, max_pos
 
 
-def traceback_vectorized(score_matrix, seq1, seq2, max_pos, match_score=2, mismatch_score=-1, gap_penalty=-1):
+def traceback_numpy(score_matrix, seq1, seq2, max_pos, match_score=2, mismatch_score=-1, gap_penalty=-1):
     i, j = max_pos
     align1, align2 = [], []
 
@@ -68,11 +68,11 @@ if __name__ == "__main__":
     seq1 = "TGTTACGG"
     seq2 = "GGTTGACTA"
 
-    score_matrix, max_score, max_pos = local_align(seq1, seq2)
+    score_matrix, max_score, max_pos = local_align_numpy(seq1, seq2)
     print("Score matrix:\n", score_matrix)
     print("Max score:", max_score)
     print("Max position:", max_pos)
 
-    alignment1, alignment2 = traceback_vectorized(score_matrix, seq1, seq2, max_pos)
+    alignment1, alignment2 = traceback_numpy(score_matrix, seq1, seq2, max_pos)
     print("Alignment 1:", alignment1)
     print("Alignment 2:", alignment2)
