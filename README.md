@@ -1,4 +1,4 @@
-# Smith Waterman Algorithm for Local Alignment
+# Smith Waterman Algorithm
 This project implements the Smith Waterman algorithm, a dynamic programming algorithm used for local sequence alignment.   
 The algorithm compares two sequences and identifies the best local alignment between them, meaning the best matching subsequence, even if it is a small part of the larger sequence.
 
@@ -29,3 +29,12 @@ By analyzing the data types of variables at runtime, Numba can generate machine 
 For numerical computations, Numba can be particularly effective because it can generate machine code that takes advantage of hardware-specific features such as SIMD instructions (which allow for parallel execution of the same instruction on multiple pieces of data) and multiple processor cores. This can lead to significant speedups over standard Python code, which typically runs on a single core and does not take advantage of SIMD instructions.  
 
 In summary, Numba is a Python library that allows developers to write high-performance numerical code in Python by using a JIT compiler to translate the code into optimized machine code at runtime. By generating code that is specifically tailored to the input data types and shapes, Numba can achieve significant speedups over standard Python code, particularly for numerical computations.  
+
+# Why the implementation using Numpy is significantly faster than the non-parallel implementation?
+Numpy is a highly optimized library for numerical operations in Python that allows for efficient array manipulation and mathematical operations. When used to calculate a score matrix for sequence alignment, Numpy's highly optimized array manipulation functions can significantly improve the runtime of the code.
+
+One way that Numpy improves the runtime is by allowing for parallel computation of the score matrix. In the non-parallel implementation of the code, the score matrix is calculated using nested for-loops, which can be slow for large sequences. Numpy, on the other hand, can perform the same operations on entire arrays using highly optimized functions that take advantage of parallel processing on modern CPUs.
+
+Another way Numpy improves the runtime is through its use of efficient memory management. In the non-parallel implementation, the score matrix is stored in a Python list, which can be slow due to the way that Python handles memory allocation. Numpy, on the other hand, uses highly optimized memory allocation strategies that can significantly reduce the amount of time spent on memory operations.
+
+Overall, the use of Numpy for sequence alignment can significantly improve the runtime of the code due to its highly optimized array manipulation functions and efficient memory management.
