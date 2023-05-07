@@ -1,0 +1,3 @@
+useful articles:
+https://www.researchgate.net/profile/Daniel-Lopresti/publication/243706366_A_Systolic_Array_for_Rapid_String_Comparison/links/56ee057508aea35d5b9962e0/A-Systolic-Array-for-Rapid-String-Comparison.pdf
+https://www.sciencedirect.com/science/article/pii/0898122194900019
