@@ -1,3 +1,6 @@
 useful articles:
-https://www.researchgate.net/profile/Daniel-Lopresti/publication/243706366_A_Systolic_Array_for_Rapid_String_Comparison/links/56ee057508aea35d5b9962e0/A-Systolic-Array-for-Rapid-String-Comparison.pdf
-https://www.sciencedirect.com/science/article/pii/0898122194900019
+*https://www.researchgate.net/profile/Daniel-Lopresti/publication/243706366_A_Systolic_Array_for_Rapid_String_Comparison/links/56ee057508aea35d5b9962e0/A-Systolic-Array-for-Rapid-String-Comparison.pdf
+*https://www.sciencedirect.com/science/article/pii/0898122194900019
+*https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=00013fe17ea0e8e997d0f144111af447e95a8de5
+*https://link.springer.com/article/10.1007/s12539-017-0225-8#Sec9 (4.2)
+**https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman
