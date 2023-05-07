@@ -16,7 +16,7 @@ These implementations can be found in the following files:
 # Benchmarking
 In the Benchmarking.py we compare the runtime performance of Smith Watermann algorithm implemented with highly efficient methods.
 
-![image](https://user-images.githubusercontent.com/129160734/235427493-1a37e535-d9b0-4d10-863c-fc14b072c8ed.png)
+![image](perf-comparison.png)
 
 
 # Winner: Numba implementation
