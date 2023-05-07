@@ -6,7 +6,7 @@ The project contains several implementations of the Smith Waterman algorithm in 
 
 These implementations can be found in the following files:
 
-* draftSw.c: C draft implementation of non-parallel matrix operations
+* c_align: C draft implementation of non-parallel matrix operations
 * draftSw.py: Python draft implementation of non-parallel matrix operations
 * nonParallelSw.py: Python implementation of non-parallel matrix operations
 * parallelSw.py:  Python implementation of parallel matrix operations
