@@ -4,3 +4,4 @@ useful articles:
 *https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=00013fe17ea0e8e997d0f144111af447e95a8de5
 *https://link.springer.com/article/10.1007/s12539-017-0225-8#Sec9 (4.2)
 **https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman
+*https://www.matec-conferences.org/articles/matecconf/pdf/2018/09/matecconf_mucet2018_06009.pdf
