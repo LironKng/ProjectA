@@ -6,8 +6,8 @@ The project contains several implementations of the Smith Waterman algorithm in 
 
 These implementations can be found in the following files:
 
-* c_align: C draft implementation of non-parallel matrix operations
-* draftSw.py: Python draft implementation of non-parallel matrix operations
+* c_align: C implementation of non-parallel matrix operations
+* draftSw.py: Python implementation of non-parallel matrix operations
 * nonParallelSw.py: Python implementation of non-parallel matrix operations
 * parallelSw.py:  Python implementation of parallel matrix operations
 * numpySw.py: Python implementation using NumPy for matrix operations
@@ -19,7 +19,7 @@ In the Benchmarking.py we compare the runtime performance of Smith Watermann alg
 ![image](perf-comparison.png)
 
 
-# Winner: Numba implementation
+# Python Winner: Numba implementation
 Numba is a Python library that allows developers to write high-performance numerical code in Python without sacrificing readability or ease of development. It works by using a just-in-time (JIT) compiler to translate Python code into machine code at runtime. This means that Numba optimizes the code on the fly, as the code is being executed, rather than ahead of time.  
 
 The key idea behind Numba is that it can generate optimized machine code that is specifically tailored to the input data types and shapes that the code is operating on. This is because Python is a dynamically-typed language, which means that the data types of variables are not known until runtime.  
@@ -37,3 +37,10 @@ One way that Numpy improves the runtime is by allowing for parallel computation 
 Another way Numpy improves the runtime is through its use of efficient memory management. In the non-parallel implementation, the score matrix is stored in a Python list, which can be slow due to the way that Python handles memory allocation. Numpy, on the other hand, uses highly optimized memory allocation strategies that can significantly reduce the amount of time spent on memory operations.
 
 Overall, the use of Numpy for sequence alignment can significantly improve the runtime of the code due to its highly optimized array manipulation functions and efficient memory management.
+
+# parallel computation using CPU processor
+The problem with using a CPU processor for parallel computation is that it's not optimized for this type of task. While CPUs are designed to execute instructions sequentially, one at a time, parallel computation involves breaking up a task into smaller pieces that can be executed simultaneously by multiple processors.
+
+When using a CPU processor for parallel computation, it can become overloaded and struggle to keep up with the demands placed on it. This can lead to slower processing times, longer wait times, and reduced overall performance. Additionally, if the CPU processor doesn't have enough cores, or processing units, to handle the workload, it can result in bottlenecks and further slowdowns.
+
+To address these issues, computer users often turn to specialized hardware such as GPUs, or Graphics Processing Units, which are specifically designed for parallel computation. GPUs have many more cores than CPUs, which allows them to execute multiple tasks simultaneously and process large amounts of data more quickly. By using specialized hardware, users can achieve faster processing times and better overall performance when working with parallel computations.
