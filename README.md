@@ -38,7 +38,7 @@ Another way Numpy improves the runtime is through its use of efficient memory ma
 
 Overall, the use of Numpy for sequence alignment can significantly improve the runtime of the code due to its highly optimized array manipulation functions and efficient memory management.
 
-# parallel computation using CPU processor
+# Parallel computation using CPU processor
 The problem with using a CPU processor for parallel computation is that it's not optimized for this type of task. While CPUs are designed to execute instructions sequentially, one at a time, parallel computation involves breaking up a task into smaller pieces that can be executed simultaneously by multiple processors.
 
 When using a CPU processor for parallel computation, it can become overloaded and struggle to keep up with the demands placed on it. This can lead to slower processing times, longer wait times, and reduced overall performance. Additionally, if the CPU processor doesn't have enough cores, or processing units, to handle the workload, it can result in bottlenecks and further slowdowns.
